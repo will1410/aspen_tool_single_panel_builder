@@ -19,7 +19,7 @@ $(document).ready(function () {
         '  <div class="panel-heading" role="tab" id="heading-' +
         id_suffix +
         '">\n' +
-        '    <h5 class="panel-title">\n' +
+        '    <h3 class="panel-title">\n' +
         '      <a role="button" data-toggle="collapse" class="accordion-plus-toggle collapsed" href="#collapse-' +
         id_suffix +
         '" aria-expanded="false" aria-controls="collapse-' +
@@ -27,7 +27,7 @@ $(document).ready(function () {
         '"><strong>' +
         panel_title +
         "</strong></a>\n" +
-        "    </h5>\n" +
+        "    </h3>\n" +
         "  </div>\n" +
         '  <div id="collapse-' +
         id_suffix +

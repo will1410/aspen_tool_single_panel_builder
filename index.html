@@ -43,7 +43,8 @@
           <li><a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill" aria-hidden="true"></i></i></a>
           </li>
           <li><a href="#about">About this project</a></li>
-          <li><a href="https://nextkansas.org/testing/tool_samples#button" target="_blank">Sample page <span class="sr-only">(opens in new tab)</span></a></li>
+          <li><a href="https://nextkansas.org/testing/tool_samples#button" target="_blank">Sample page <span
+                class="sr-only">(opens in new tab)</span></a></li>
           <li><a href="https://will1410.github.io/aspen_tools/">Other tools</a></li>
           <li>
             <a href="https://github.com/will1410/aspen_tool_single_panel_builder" target="_blank" aria-label="Github">
@@ -72,8 +73,8 @@
               </li>
               <li><a class="dropdown-item" href="https://will1410.github.io/aspen_tools/">Other tools</a></li>
               <li>
-                <a class="dropdown-item" href="https://github.com/will1410/aspen_tool_screenshot"
-                  target="_blank">Github <span class="sr-only">(opens in new tab)</span></a>
+                <a class="dropdown-item" href="https://github.com/will1410/aspen_tool_single_panel_builder" target="_blank">Github
+                  <span class="sr-only">(opens in new tab)</span></a>
               </li>
             </ul>
 
@@ -103,37 +104,69 @@
 
             <form>
 
-              <div class="form-group row" style="padding: 25px;">
+              <div class="row py-4" >
                 <label for="panel_title" class="col-2 col-form-label">Panel title</label>
                 <div class="col-10">
                   <input id="panel_title" name="panel_title" type="text" class="form-control">
                 </div>
               </div>
 
-              <div class="form-group row" style="padding: 25px;">
+              <div class="row py-1">
+                <fieldset class="row" >
+                  <legend for="hl_radio" class="col-3 offset-2 col-form-label ">Heading level for title</legend>
+
+                  <div class="col-2" >
+                    <div class="d-flex gap-4">
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="heading_level"
+                          id="heading_h2" value="h2" checked>
+                        <label class="form-check-label" for="heading_h2">H2</label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="heading_level"
+                          id="heading_h3" value="h3">
+                        <label class="form-check-label" for="heading_h3">H3</label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="heading_level"
+                          id="heading_h4" value="h4">
+                        <label class="form-check-label" for="heading_h4">H4</label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="heading_level"
+                          id="heading_h5" value="h5">
+                        <label class="form-check-label" for="heading_h5">H5</label>
+                      </div>
+
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="row py-4">
                 <label for="note_text" class="col-2 col-form-label">Panel content</label>
                 <div class="col-10">
                   <textarea id="note_text" name="note_text" cols="40" rows="8" class="form-control"></textarea>
                 </div>
               </div>
 
-              <div class="form-group row col-10 offset-1" style="padding: 25px;">
-
-                <div class="offset-1 col-2">
+              <div class="row py-4">
+                <div class="col-10 offset-2">
                   <button name="submit" type="submit" class="btn btn-primary" id="accordion_generator">
                     Submit
                   </button>
-                </div>
 
-                <div class="col-5">
                   <button name="copy" type="submit" class="btn btn-primary" id="copy_to_clipboard">
                     Copy output to clipboard
                   </button>
                 </div>
-
               </div>
 
-              <div class="form-group row" style="padding: 25px;">
+              <div class="row py-4">
                 <label for="output" class="col-2 col-form-label">Output</label>
                 <div class="col-10">
                   <textarea id="output" name="output" cols="40" rows="15" class="form-control"></textarea>
@@ -145,6 +178,10 @@
           </div>
 
           <div class="row col-10 offset-1">
+
+            <h2 id="notes">Notes</h2>
+
+            <p>The heading level for title buttons default to H2.  How you set this will depend on where in a page you plan to use the panel and its contents.  For the sake of accessibility at our library, we mostly use H2 for basic pages.  If you want to use this for a Web Resource or a Custom Page, you should may need to adjust the heading leavel in order to make the final page accessible.</p>
 
             <h2 id="about">About</h2>
 
@@ -197,7 +234,8 @@
             Permission is hereby granted, free of charge...
           </p>
           <p><a class="btn btn-primary btn-lg" style="margin-top: 1em;" href="LICENSE" target="_blank"
-              rel="noopener noreferrer">View full license <i class="bi bi-github" aria-hidden="true"></i> <span class="sr-only">(opens in new tab)</span></a></p>
+              rel="noopener noreferrer">View full license <i class="bi bi-github" aria-hidden="true"></i> <span
+                class="sr-only">(opens in new tab)</span></a></p>
         </article>
       </div>
 

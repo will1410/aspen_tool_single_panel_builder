@@ -1,9 +1,11 @@
 $(document).ready(function () {
+
   $("#accordion_generator").click(function (event) {
     event.preventDefault();
 
     const panel_title = $("#panel_title").val();
     const note_text = $("#note_text").val().replace(/(?<!>)\n/g, '<br>\n');
+    const heading_level = $('input[name="heading_level"]:checked').val();
 
     const now = new Date($.now());
     const day = ("0" + now.getDate()).slice(-2);
@@ -19,7 +21,7 @@ $(document).ready(function () {
         '  <div class="panel-heading" role="tab" id="heading-' +
         id_suffix +
         '">\n' +
-        '    <h3 class="panel-title">\n' +
+        '    <' + heading_level + ' class="panel-title">\n' +
         '      <a role="button" data-toggle="collapse" class="accordion-plus-toggle collapsed" href="#collapse-' +
         id_suffix +
         '" aria-expanded="false" aria-controls="collapse-' +
@@ -27,7 +29,7 @@ $(document).ready(function () {
         '"><strong>' +
         panel_title +
         "</strong></a>\n" +
-        "    </h3>\n" +
+        "    </" + heading_level + ">\n" +
         "  </div>\n" +
         '  <div id="collapse-' +
         id_suffix +
@@ -35,8 +37,8 @@ $(document).ready(function () {
         id_suffix +
         '">\n' +
         "    <div class='panel-body'>\n" +
-        "      <p>\n" + 
-        "        " + 
+        "      <p>\n" +
+        "        " +
         note_text +
         "\n      </p>\n" +
         "    </div>\n" +
@@ -46,10 +48,13 @@ $(document).ready(function () {
     );
   });
 
-  $("#copy_to_clipboard").click(function () {
+  $("#copy_to_clipboard").click(function (event) {
     event.preventDefault();
-    var copy_output = $("#output").val().trim();
+
+    const copy_output = $("#output").val().trim();
+
     console.log(copy_output);
     navigator.clipboard.writeText(copy_output);
   });
+
 });

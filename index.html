@@ -30,7 +30,7 @@
 
   <header>
     <a href="#">
-      <img alt="Logo" src="aspen_tool_single_panel.png" style="width: 65%; height: auto;">
+      <img alt="GHW Logo" src="aspen_tool_single_panel.png" style="width: 65%; height: auto;">
     </a>
   </header>
 
@@ -40,13 +40,14 @@
 
       <div class="col-md-5 offset-md-1">
         <ul class="d-flex gap-4 list-unstyled mb-0">
-          <li><a href="index.html"><i class="bi bi-house-door-fill"></i></a></li>
+          <li><a href="index.html" aria-label="Home"><i class="bi bi-house-door-fill" aria-hidden="true"></i></i></a>
+          </li>
           <li><a href="#about">About this project</a></li>
-          <li><a href="https://nextkansas.org/testing/tool_samples#button" target="_blank">Sample page</a></li>
+          <li><a href="https://nextkansas.org/testing/tool_samples#button" target="_blank">Sample page <span class="sr-only">(opens in new tab)</span></a></li>
           <li><a href="https://will1410.github.io/aspen_tools/">Other tools</a></li>
           <li>
-            <a href="https://github.com/will1410/aspen_tool_single_panel_builder" target="_blank">
-              <i class="bi bi-github"></i>
+            <a href="https://github.com/will1410/aspen_tool_single_panel_builder" target="_blank" aria-label="Github">
+              <i class="bi bi-github" aria-hidden="true"></i> <span class="sr-only">(opens in new tab)</span>
             </a>
           </li>
         </ul>
@@ -58,20 +59,21 @@
 
           <li class="dropdown">
 
-            <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-list"></i>
+            <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              aria-label="Menu">
+              <i class="bi bi-list" aria-hidden="true"></i>
             </a>
 
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#about">About this project</a></li>
               <li>
                 <a class="dropdown-item" href="https://nextkansas.org/testing/tool_samples#button"
-                  target="_blank">Sample page</a>
+                  target="_blank">Sample page <span class="sr-only">(opens in new tab)</span></a>
               </li>
               <li><a class="dropdown-item" href="https://will1410.github.io/aspen_tools/">Other tools</a></li>
               <li>
                 <a class="dropdown-item" href="https://github.com/will1410/aspen_tool_screenshot"
-                  target="_blank">Github</a>
+                  target="_blank">Github <span class="sr-only">(opens in new tab)</span></a>
               </li>
             </ul>
 
@@ -85,82 +87,103 @@
 
   </div>
 
-  <div style="background-color: #c7cdd3; padding: 15px;">
+  <main>
 
-    <form>
+    <div class="container">
 
-      <div class="form-group row" style="padding: 25px;">
-        <label for="panel_title" class="col-2 col-form-label">Panel title</label>
-        <div class="col-8">
-          <input id="panel_title" name="panel_title" type="text" class="form-control">
+      <div class="row">
+
+        <div class="col-10 offset-1">
+
+          <div class="row col-12">
+            <h1>Single panel creator for Aspen Discovery</h1>
+          </div>
+
+          <div class="row col-12">
+
+            <form>
+
+              <div class="form-group row" style="padding: 25px;">
+                <label for="panel_title" class="col-2 col-form-label">Panel title</label>
+                <div class="col-10">
+                  <input id="panel_title" name="panel_title" type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group row" style="padding: 25px;">
+                <label for="note_text" class="col-2 col-form-label">Panel content</label>
+                <div class="col-10">
+                  <textarea id="note_text" name="note_text" cols="40" rows="8" class="form-control"></textarea>
+                </div>
+              </div>
+
+              <div class="form-group row col-10 offset-1" style="padding: 25px;">
+
+                <div class="offset-1 col-2">
+                  <button name="submit" type="submit" class="btn btn-primary" id="accordion_generator">
+                    Submit
+                  </button>
+                </div>
+
+                <div class="col-5">
+                  <button name="copy" type="submit" class="btn btn-primary" id="copy_to_clipboard">
+                    Copy output to clipboard
+                  </button>
+                </div>
+
+              </div>
+
+              <div class="form-group row" style="padding: 25px;">
+                <label for="output" class="col-2 col-form-label">Output</label>
+                <div class="col-10">
+                  <textarea id="output" name="output" cols="40" rows="15" class="form-control"></textarea>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="row col-10 offset-1">
+
+            <h2 id="about">About</h2>
+
+            <p>
+              Aspen uses the Bootstrap framework so there are many classes and layouts we have access to when we create
+              basic or custom pages in Aspen. Because Aspen uses a basic WYSIWYG editor, if you want to add Bootstrap
+              elements to a page, you have to go to the code view and hand-code things like buttons or badges or to use
+              the Bootstrap column configurations or other Bootstrap elements.
+            </p>
+
+            <p>
+              On some of the training pages we are creating for Next Search Catalog we wanted to be able to add some
+              content in collapsible panels. To make these panels consistent and easy to use for a variety of NEKLS
+              staff members, I created this simple fill-in web form that allows staff to fill in the panel title and the
+              panel content, then click a button that outputs a consistently constructed Bootstrap panel.
+            </p>
+
+            <p>
+              This entire project is available on Github and released with an MIT license, so if you'd like to see the
+              source code or if you'd like to download a copy of the project and change it to suit your needs, feel free
+              to do so.
+            </p>
+
+            <p>
+              <a class="btn btn-primary btn-lg" style="margin-top: 1em;"
+                href="https://github.com/will1410/aspen_tool_single_panel_builder" target="_self">
+                Available on Github <i class="bi bi-github" aria-hidden="true"></i>
+              </a>
+            </p>
+
+          </div>
+
         </div>
+
       </div>
 
-      <div class="form-group row" style="padding: 25px;">
-        <label for="note_text" class="col-2 col-form-label">Panel content</label>
-        <div class="col-8">
-          <textarea id="note_text" name="note_text" cols="40" rows="8" class="form-control"></textarea>
-        </div>
-      </div>
+    </div>
 
-      <div class="form-group row" style="padding: 25px;">
-
-        <div class="offset-2 col-1">
-          <button name="submit" type="submit" class="btn btn-primary" id="accordion_generator">
-            Submit
-          </button>
-        </div>
-
-        <div class="col-2">
-          <button name="copy" type="submit" class="btn btn-primary" id="copy_to_clipboard">
-            Copy output to clipboard
-          </button>
-        </div>
-
-      </div>
-
-      <div class="form-group row" style="padding: 25px;">
-        <label for="output" class="col-2 col-form-label">Output</label>
-        <div class="col-8">
-          <textarea id="output" name="output" cols="40" rows="15" class="form-control"></textarea>
-        </div>
-      </div>
-
-    </form>
-
-  </div>
-
-  <div class="container about mt-5 comments" id="about">
-
-    <h2>About</h2>
-
-    <p>
-      Aspen uses the Bootstrap framework so there are many classes and layouts we have access to when we create basic
-      or custom pages in Aspen. Because Aspen uses a basic WYSIWYG editor, if you want to add Bootstrap elements to a
-      page, you have to go to the code view and hand-code things like buttons or badges or to use the Bootstrap column
-      configurations or other Bootstrap elements.
-    </p>
-
-    <p>
-      On some of the training pages we are creating for Next Search Catalog we wanted to be able to add some content
-      in collapsible panels. To make these panels consistent and easy to use for a variety of NEKLS staff members, I
-      created this simple fill-in web form that allows staff to fill in the panel title and the panel content, then
-      click a button that outputs a consistently constructed Bootstrap panel.
-    </p>
-
-    <p>
-      This entire project is available on Github and released with an MIT license, so if you'd like to see the source
-      code or if you'd like to download a copy of the project and change it to suit your needs, feel free to do so.
-    </p>
-
-    <p>
-      <a class="btn btn-primary btn-lg" style="margin-top: 1em;"
-        href="https://github.com/will1410/aspen_tool_single_panel_builder" target="_self">
-        Available on Github <i class="bi bi-github"></i>
-      </a>
-    </p>
-
-  </div>
+  </main>
 
   <footer>
 
@@ -171,9 +194,10 @@
           <p>
             The MIT License (MIT)<br>
             Copyright (c) 2026 George H. Williams<br>
-            Permission is hereby granted, free of charge...<br>
-            [click here for <a href="LICENSE">full license</a>]
+            Permission is hereby granted, free of charge...
           </p>
+          <p><a class="btn btn-primary btn-lg" style="margin-top: 1em;" href="LICENSE" target="_blank"
+              rel="noopener noreferrer">View full license <i class="bi bi-github" aria-hidden="true"></i> <span class="sr-only">(opens in new tab)</span></a></p>
         </article>
       </div>
 
@@ -189,4 +213,5 @@
   <script src="./script.js"></script>
 
 </body>
+
 </html>

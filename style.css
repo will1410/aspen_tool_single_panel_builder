@@ -67,3 +67,5 @@ footer div {
 body {background-color: #c7cdd3;}
 
 pre {border: 5px solid black; border-radius: 16px; padding: 20px}
+
+.sr-only {display: none;}
